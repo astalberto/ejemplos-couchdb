@@ -1,6 +1,6 @@
 import requests
 import json
-
+from config import url_base, port
 # Cargar datos desde archivo
 with open('datos.json', 'r') as f:
     # pasar los datos a estructuras de Python
@@ -14,7 +14,7 @@ for d in data['docs']:
 
 base_datos = "personas004"
 # Configurar el acceso a la base de datos
-url = f"http://127.0.0.1:5984/{base_datos}"
+url = f"{url_base}:{port}/{base_datos}"
 headers = {'Content-Type': 'application/json'}
 
 # Enviar datos
