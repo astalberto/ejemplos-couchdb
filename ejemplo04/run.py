@@ -25,3 +25,8 @@ for doc in lista_datos:
         json=doc
     )
     print(f"Insertando {doc['nombre']} | {response.status_code}")
+'''
+La diferencia radica en la forma de importar, mientras que bulk en el ejemplo03
+manda una sola peticion con todos los datos que tenga, en el ejemplo04 hace una
+importacion individual de cada objeto del json
+'''
